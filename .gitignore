@@ -1,0 +1,25 @@
+# Build artifacts
+*.o
+*.a
+*.so
+*.dylib
+cphotoc
+*.dSYM/
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*~
+
+# OS
+.DS_Store
+
+# Test outputs
+output/
+out/
+*.cph
+*.cphoto
+
+# Dataset (user-provided, do not commit photos)
+dataset/*
