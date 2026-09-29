@@ -1,13 +1,17 @@
 # C Photo Compressor — build file
-# Will be filled in as the codec is implemented.
 
 CC ?= cc
-CFLAGS ?= -Wall -Wextra -Wpedantic -std=c11 -O2
+CFLAGS ?= -Wall -Wextra -Wpedantic -std=c11 -O2 -Ithird-party
+
+SRC ?= src/main.c
+BIN ?= main
 
 .PHONY: all clean
 
-all:
-	@echo "Scaffold ready. Implement the codec files in src/ before building."
+all: $(BIN)
+
+$(BIN): $(SRC)
+	$(CC) $(CFLAGS) -o $@ $<
 
 clean:
-	@rm -f cphotoc src/*.o
+	rm -f $(BIN) src/*.o
